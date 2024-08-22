@@ -78,6 +78,19 @@ function convertAnswersToReadmeSyntax(answers){
   )
   pageElements.push(installationInstructions);
 
+  // Usage Info
+  const usageInfo = `## Usage Information\n\n${answers.usageInfo}`
+  pageElements.push(usageInfo);
+
+  // Contribution Guidelines
+  const contributionGuidelines = `## Contribution Guidelines\n\n${answers.contributionGuidelines}`;
+  pageElements.push(contributionGuidelines);
+
+  // Test Instructions
+  const testInstructions = `## Test Instructions\n\n${answers.testInstructions}`;
+  pageElements.push(testInstructions);
+  
+
   return pageElements;
 }
 
