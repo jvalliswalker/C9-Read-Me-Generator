@@ -1,1 +1,5 @@
+# Exclude modules content
 node_modules
+
+# Exclude content of output folder
+output/*
