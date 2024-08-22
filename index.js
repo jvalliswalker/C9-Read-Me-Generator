@@ -74,6 +74,18 @@ function convertAnswersToReadmeSyntax(answers){
     pageElements.push(badge);
   }
 
+  // Table of Contents
+  pageElements.push(
+    '## Table of Contents',
+    ' - [Description](#description)',
+    ' - [Installation](#installation)',
+    ' - [Usage](#usage)',
+    ' - [Contributing](#contributing)',
+    ' - [Tests](#tests)',
+    ' - [License](#license)',
+    ' - [Questions](#questions)',
+  )
+
   // Create description
   pageElements.push(
     '## Description',
