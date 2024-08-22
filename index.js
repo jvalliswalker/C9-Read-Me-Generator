@@ -1,11 +1,15 @@
-// TODO: Include packages needed for this application
+// Variables
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 const outputPath = './output';
 const fileNameAndPath = `${outputPath}/README.md`;
 
-// TODO: Create an array of questions for user input
+// title
+// description, installation instructions, usage information, contribution guidelines, and test instructions
+// license
+// Github username
+// email address
 const questions = [
   {
     name: 'title',
@@ -50,8 +54,12 @@ const questions = [
   // }
 ];
 
+// Execution // 
 
-// TODO: Create a function to write README file
+init();
+
+// Functions //
+
 function writeToFile(data) {
   fs.stat(outputPath, (error, stats) => {
     // Create directory if not present
@@ -67,16 +75,7 @@ function writeToFile(data) {
   });
 }
 
-
-
-// TODO: Create a function to initialize app
 function init() {
-  // title
-  // description, installation instructions, usage information, contribution guidelines, and test instructions
-  // license
-  // Github username
-  // email address
-
   inquirer.prompt(
     questions
   )
@@ -84,6 +83,3 @@ function init() {
     writeToFile(answers)
   })
 }
-
-// Function call to initialize app
-init();
