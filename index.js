@@ -1,10 +1,11 @@
 // Variables
 import inquirer from 'inquirer';
 import fs from 'fs';
-import { buildBadge } from './scripts/badgeHandler.mjs';
+import { buildBadge, badgeInfoMap } from './scripts/badgeHandler.mjs';
 
 const outputPath = './output';
 const fileNameAndPath = `${outputPath}/README.md`;
+const badges = Object.keys(badgeInfoMap);
 
 // title
 // description, installation instructions, usage information, contribution guidelines, and test instructions
@@ -40,10 +41,7 @@ const questions = [
     name: 'license',
     message: 'What license will this project use?',
     type: 'list',
-    choices: [
-      'Option A',
-      'Option B'
-    ]
+    choices: badges
   },
   {
     name: 'username',
