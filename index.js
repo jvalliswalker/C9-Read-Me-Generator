@@ -1,6 +1,7 @@
 // Variables
-const inquirer = require('inquirer');
-const fs = require('fs');
+import inquirer from 'inquirer';
+import fs from 'fs';
+import { buildBadge } from './scripts/badgeHandler.mjs';
 
 const outputPath = './output';
 const fileNameAndPath = `${outputPath}/README.md`;
@@ -68,6 +69,11 @@ function convertAnswersToReadmeSyntax(answers){
   const title = `# ${answers.title}\n\n`;
   pageElements.push(title);
 
+  // Create license badge
+  const badgeHtml = buildBadge(answers.license);
+  const badge = `[![License](${badgeHtml})]`
+  pageElements.push(badge);
+
   // Create description
   const description = `## Description\n\n${answers.description}`;
   pageElements.push(description);
@@ -121,7 +127,7 @@ function init() {
   )
   .then(answers => {
 
-    pageElements = convertAnswersToReadmeSyntax(answers);
+    const pageElements = convertAnswersToReadmeSyntax(answers);
 
     writeToFile(pageElements.join('\n'));
   })
