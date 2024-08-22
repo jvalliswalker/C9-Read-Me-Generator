@@ -64,43 +64,61 @@ function convertAnswersToReadmeSyntax(answers){
   const pageElements = [];
 
   // Create title
-  const title = `# ${answers.title}\n\n`;
-  pageElements.push(title);
+  pageElements.push(
+    `# ${answers.title}`
+  );
 
   // Create license badge
   const badge = buildBadge(answers.license);
   if(badge != null){
-    pageElements.push(`${badge}\n\n`);
+    pageElements.push(badge);
   }
 
   // Create description
-  const description = `## Description\n\n${answers.description}`;
-  pageElements.push(description);
+  pageElements.push(
+    '## Description',
+    answers.description
+  );
 
   // Create installation instructions
-  const installationInstructions = (
-    `## Installation \n\n${answers.installationInstructions}`
-  )
-  pageElements.push(installationInstructions);
+  pageElements.push(
+    '## Installation',
+    answers.installationInstructions
+  );
 
   // Usage Info
-  const usageInfo = `## Usage\n\n${answers.usageInfo}`
-  pageElements.push(usageInfo);
+  pageElements.push(
+    '## Usage',
+    answers.usageInfo
+  );
 
   // Contribution Guidelines
-  const contributionGuidelines = `## Contributing\n\n${answers.contributionGuidelines}`;
-  pageElements.push(contributionGuidelines);
+  pageElements.push(
+    '## Contributing',
+    answers.contributionGuidelines
+  );
 
   // Test Instructions
-  const testInstructions = `## Tests\n\n${answers.testInstructions}`;
-  pageElements.push(testInstructions);
+  pageElements.push(
+    '## Tests',
+    answers.testInstructions
+  );
 
   // License
-  const license = `## License\n\nThis project uses the ${answers.license} license`;
-  pageElements.push(license);
+  if(badge != null){
+    pageElements.push(
+      '## License\n\n',
+      `This project is licensed under ${answers.license}\n\n`
+    );
+  }
 
-  // 
-
+  // Questions
+  pageElements.push(
+    '## Questions',
+    `[${answers.username}](https://github.com/${answers.username})`,
+    `Email: ${answers.email}`
+  );
+  
   return pageElements;
 }
 
@@ -128,6 +146,6 @@ function init() {
 
     const pageElements = convertAnswersToReadmeSyntax(answers);
 
-    writeToFile(pageElements.join('\n'));
+    writeToFile(pageElements.join('\n\n'));
   })
 }
