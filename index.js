@@ -69,7 +69,9 @@ function convertAnswersToReadmeSyntax(answers){
 
   // Create license badge
   const badge = buildBadge(answers.license);
-  pageElements.push(`${badge}\n\n`);
+  if(badge != null){
+    pageElements.push(`${badge}\n\n`);
+  }
 
   // Create description
   const description = `## Description\n\n${answers.description}`;

@@ -81,12 +81,17 @@ const badgeInfoMap = {
 
 function buildBadge(badgeName) {
 
-  const badgeObject = badgeInfoMap[badgeName];
-
-  // Create base hyperlink
-  let badgeHyperlink = `${baseHTML}${badgeObject.formattedName}-${badgeObject.versionNumber}-${badgeObject.color}`
-
-  return `[![${badgeName}](${badgeHyperlink})](${badgeObject.licenseSitePage})`;
+  if(badgeName == 'None'){
+    return null;
+  }
+  else {
+    const badgeObject = badgeInfoMap[badgeName];
+  
+    // Create base hyperlink
+    let badgeHyperlink = `${baseHTML}${badgeObject.formattedName}-${badgeObject.versionNumber}-${badgeObject.color}`
+  
+    return `[![${badgeName}](${badgeHyperlink})](${badgeObject.licenseSitePage})`;
+  }
 }
 
 export { buildBadge, badgeInfoMap }
