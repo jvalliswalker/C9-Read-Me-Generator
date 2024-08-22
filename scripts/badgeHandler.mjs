@@ -29,19 +29,53 @@ const badgeInfoMap = {
     versionNumber: 'BSD%202--Clause',
     color: 'orange'
   },
-  'BSD 3-Clause "New" or "Renewed" License': {},
-  'Boost Software License 1.0': {},
-  'Creative Commons Zero v1.0 Universal': {},
-  'Eclipse Public License 2.0': {},
-  'GNU Affero General Public License v3.0': {},
-  'GNU Lesser General Public License v2.1': {},
-  'Mozilla Public License 2.0': {},
-  'The Unlicense': {},
-  'Option A': {
-    formattedName: 'Option%20A',
-    licenseSitePage: 'https://opensource.org/license/apache-2-0',
-    versionNumber: '1.0',
-    color: 'green'
+  'BSD 3-Clause "New" or "Renewed" License': {
+    formattedName: 'License',
+    licenseSitePage: 'https://opensource.org/licenses/BSD-3-Clause',
+    versionNumber: 'BSD%203--Clause',
+    color: 'orange'
+  },
+  'Boost Software License 1.0': {
+    formattedName: 'License',
+    licenseSitePage: 'https://www.boost.org/LICENSE_1_0.txt',
+    versionNumber: 'Boost%201.0',
+    color: 'lightblue'
+  },
+  'Creative Commons Zero v1.0 Universal': {
+    formattedName: 'License',
+    licenseSitePage: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    versionNumber: 'CC0%201.0',
+    color: 'lightgrey'
+  },
+  'Eclipse Public License 2.0': {
+    formattedName: 'License',
+    licenseSitePage: 'https://opensource.org/licenses/EPL-1.0',
+    versionNumber: 'EPL%201.0',
+    color: 'red'
+  },
+  'GNU Affero General Public License v3.0': {
+    formattedName: 'License',
+    licenseSitePage: 'https://www.gnu.org/licenses/agpl-3.0',
+    versionNumber: 'AGPL%20v3',
+    color: 'blue'
+  },
+  'GNU Lesser General Public License v2.1': {
+    formattedName: 'License',
+    licenseSitePage: 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html',
+    versionNumber: 'AGPL%20v2.1',
+    color: 'blue'
+  },
+  'Mozilla Public License 2.0': {
+    formattedName: 'License',
+    licenseSitePage: 'https://opensource.org/licenses/MPL-2.0',
+    versionNumber: 'MPL%20v2.0',
+    color: 'brightgreen'
+  },
+  'The Unlicense': {
+    formattedName: 'License',
+    licenseSitePage: 'http://unlicense.org/',
+    versionNumber: 'Unlicense',
+    color: 'blue'
   }
 }
 
