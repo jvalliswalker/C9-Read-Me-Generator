@@ -115,8 +115,9 @@ function convertAnswersToReadmeSyntax(answers){
   // Questions
   pageElements.push(
     '## Questions',
-    `[${answers.username}](https://github.com/${answers.username})`,
-    `Email: ${answers.email}`
+    `You can reach me for any questions about this project on github at:`,
+    ` - Github: [${answers.username}](https://github.com/${answers.username})`,
+    ` - Email: ${answers.email}`
   );
   
   return pageElements;
