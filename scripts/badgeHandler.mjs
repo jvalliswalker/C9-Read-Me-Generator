@@ -84,21 +84,7 @@ function buildBadge(badgeName) {
   const badgeObject = badgeInfoMap[badgeName];
 
   // Create base hyperlink
-  let badgeHyperlink = `${baseHTML}${badgeObject.formattedName}`
-
-  // Set badge version number if available
-  if(badgeObject.versionNumber){
-    badgeHyperlink += `-${badgeObject.versionNumber}`
-  };
-
-  // Set badge coloring
-  if(badgeObject.color){
-    badgeHyperlink += `-${badgeObject.color}`;
-  }
-  else{
-    badgeHyperlink += '-gray';
-  }
-
+  let badgeHyperlink = `${baseHTML}${badgeObject.formattedName}-${badgeObject.versionNumber}-${badgeObject.color}`
 
   return `[![${badgeName}](${badgeHyperlink})](${badgeObject.licenseSitePage})`;
 }
