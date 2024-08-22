@@ -50,19 +50,6 @@ const questions = [
   // }
 ];
 
-// title
-// description, installation instructions, usage information, contribution guidelines, and test instructions
-// license
-// Github username
-// email address
-
-inquirer.prompt(
-  questions
-)
-.then(answers => {
-  writeToFile(answers)
-})
-
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
@@ -83,7 +70,20 @@ function writeToFile(data) {
 
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  // title
+  // description, installation instructions, usage information, contribution guidelines, and test instructions
+  // license
+  // Github username
+  // email address
+
+  inquirer.prompt(
+    questions
+  )
+  .then(answers => {
+    writeToFile(answers)
+  })
+}
 
 // Function call to initialize app
 init();
