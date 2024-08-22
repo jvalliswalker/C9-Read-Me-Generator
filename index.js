@@ -65,31 +65,36 @@ function convertAnswersToReadmeSyntax(answers){
   const pageElements = [];
 
   // Create title
-  const title = `# ${answers.title}\n`;
+  const title = `# ${answers.title}\n\n`;
   pageElements.push(title);
 
   // Create description
-  const description = `${answers.description}\n`;
+  const description = `## Description\n\n${answers.description}`;
   pageElements.push(description);
 
   // Create installation instructions
   const installationInstructions = (
-    `## Installation Instructions\n\n${answers.installationInstructions}`
+    `## Installation \n\n${answers.installationInstructions}`
   )
   pageElements.push(installationInstructions);
 
   // Usage Info
-  const usageInfo = `## Usage Information\n\n${answers.usageInfo}`
+  const usageInfo = `## Usage\n\n${answers.usageInfo}`
   pageElements.push(usageInfo);
 
   // Contribution Guidelines
-  const contributionGuidelines = `## Contribution Guidelines\n\n${answers.contributionGuidelines}`;
+  const contributionGuidelines = `## Contributing\n\n${answers.contributionGuidelines}`;
   pageElements.push(contributionGuidelines);
 
   // Test Instructions
-  const testInstructions = `## Test Instructions\n\n${answers.testInstructions}`;
+  const testInstructions = `## Tests\n\n${answers.testInstructions}`;
   pageElements.push(testInstructions);
-  
+
+  // License
+  const license = `## License\n\nThis project uses the ${answers.license} license`;
+  pageElements.push(license);
+
+  // 
 
   return pageElements;
 }
