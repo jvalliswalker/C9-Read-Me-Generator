@@ -7,11 +7,7 @@ const outputPath = './output';
 const fileNameAndPath = `${outputPath}/README.md`;
 const badges = Object.keys(badgeInfoMap);
 
-// title
-// description, installation instructions, usage information, contribution guidelines, and test instructions
-// license
-// Github username
-// email address
+
 const questions = [
   {
     name: 'title',
@@ -140,7 +136,6 @@ function writeToFile(data) {
   fs.stat(outputPath, (error, stats) => {
     // Create directory if not present
     if(error) {
-      console.log(error);
       fs.mkdirSync(outputPath);
     }
 
