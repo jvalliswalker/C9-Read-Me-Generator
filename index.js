@@ -20,7 +20,7 @@ const questions = [
     message: 'Please enter a project description'
   },
   {
-    name: 'installation',
+    name: 'installationInstructions',
     message: 'What are the installation instructions?'
   },
   {
@@ -64,8 +64,19 @@ function convertAnswersToReadmeSyntax(answers){
 
   const pageElements = [];
 
-  const title = `### ${answers.title}`;
+  // Create title
+  const title = `# ${answers.title}\n`;
   pageElements.push(title);
+
+  // Create description
+  const description = `${answers.description}\n`;
+  pageElements.push(description);
+
+  // Create installation instructions
+  const installationInstructions = (
+    `## Installation Instructions\n\n${answers.installationInstructions}`
+  )
+  pageElements.push(installationInstructions);
 
   return pageElements;
 }
