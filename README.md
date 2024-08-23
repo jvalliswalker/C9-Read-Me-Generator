@@ -5,7 +5,8 @@ This project is a nodejs command-line program the takes user input and uses it t
 
 ## Video & Screenshots
 
-![Walkthrough](/videos/Assignment-9-Video-Demo.mp4)
+
+https://github.com/user-attachments/assets/7f58a5b8-76a6-4d75-82ec-a23de67bd0b7
 
 ![Command Line](images/demo-command-line.png)
 
