@@ -1,5 +1,10 @@
 # C9-Read-Me-Generator
 
-# Professional README Generator Starter Code
+## Description
+This project is a nodejs command-line program the takes user input and uses it to create a standardized README.md file which can be used in github projects.
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## Video & Screenshots
+
+![Command Line](images/demo-command-line.png)
+
+![README Image](images/demo-readme.png)
