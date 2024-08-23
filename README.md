@@ -5,7 +5,9 @@ This project is a nodejs command-line program the takes user input and uses it t
 
 ## Video & Screenshots
 
-![Walkthrough](/videos/Assignment-9-Video-Demo.mp4)
+<video width="320" height="240" controls>
+  <source src="./videos/Assignment-9-Video-Demo.mp4" type="video/mp4">
+</video>
 
 ![Command Line](images/demo-command-line.png)
 
