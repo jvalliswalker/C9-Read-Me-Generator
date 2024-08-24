@@ -20,3 +20,10 @@ https://github.com/user-attachments/assets/7f58a5b8-76a6-4d75-82ec-a23de67bd0b7
 ![Command Line](images/demo-command-line.png)
 
 ![README Image](images/demo-readme.png)
+
+
+## References
+
+* Repo badge apperances were from the Markdown License badges repo by Lukas H at https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+
+* Repo creation via the `buildBadge()` function in `badgeHandler.mjs` uses instructions from shields.io at https://shields.io/badges
